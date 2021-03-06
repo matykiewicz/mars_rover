@@ -14,13 +14,13 @@ form = """
   <form action="/run" method="post">
     <p>
       <br>
-      <input type="submit" value="Drive">
+      <input style="width:150px; height:150px;" type="submit" value="Drive">
     </p>
   </form>
   <form action="/stop" method="post">
     <p>
       <br>
-      <input type="submit" value="Stop">
+      <input style="width:150px; height:150px;" type="submit" value="Stop">
     </p>
   </form>
 </body>
@@ -42,7 +42,7 @@ def hello_world_run():
 
 @app.route('/stop', methods=['POST'])
 def hello_world_stop():
-    ls.move_stop()
+    ls = LSMoveProducer(file_prefix="/tmp/", serial_port=LS_SERIAL_PORT)
     return form
 
 

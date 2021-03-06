@@ -4,7 +4,7 @@ import lewansoul_lx16a
 import logging
 from typing import List, Tuple, Callable
 
-LS_SPEED = 500
+LS_SPEED = 600
 
 
 class LSMoveProducer:
@@ -27,15 +27,15 @@ class LSMoveProducer:
         time.sleep(1)
         self.speed = LS_SPEED
         self.move_sequence = [
-            (self.move_forward, 8),
+            (self.move_forward, 10),
             (self.move_left, 2),
-            (self.move_forward, 8),
+            (self.move_forward, 10),
             (self.move_left, 2),
-            (self.move_forward, 8),
+            (self.move_forward, 10),
             (self.move_left, 2),
-            (self.move_forward, 8),
+            (self.move_forward, 10),
             (self.move_left, 2),
-            (self.move_forward, 8),
+            (self.move_forward, 10),
             (self.move_left, 2),
         ]
 
